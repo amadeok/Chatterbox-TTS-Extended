@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import torch
-torch.__version__
+torch.__version__ #'2.6.0+cu124'
 import os
 import re
 import datetime
