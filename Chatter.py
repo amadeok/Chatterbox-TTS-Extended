@@ -1,6 +1,7 @@
 import random
 import numpy as np
 import torch
+torch.__version__
 import os
 import re
 import datetime
@@ -15,7 +16,7 @@ import string
 import difflib
 import time
 import gc
-from chatterbox.src.chatterbox.tts import ChatterboxTTS
+from chatterbox_.src.chatterbox.tts import ChatterboxTTS
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import whisper
 import nltk
@@ -24,7 +25,7 @@ from faster_whisper import WhisperModel as FasterWhisperModel
 import json
 import csv
 import soundfile as sf
-from chatterbox.src.chatterbox.vc import ChatterboxVC
+from chatterbox_.src.chatterbox.vc import ChatterboxVC
 SETTINGS_PATH = "settings.json"
 #THIS IS THE START
 def load_settings():
@@ -1236,7 +1237,7 @@ def apply_settings_json(settings_json):
 
 
 def main():
-    with gr.Blocks() as demo:
+    with gr.Blocks(title="Chatterbox TTS extended") as demo:
         gr.Markdown("# 🎧 Chatterbox TTS Extended")
         with gr.Tabs():
             # TTS Tab (your original interface)
